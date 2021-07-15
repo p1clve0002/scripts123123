@@ -17,7 +17,7 @@ async def on_ready():
 
      
     while True:
-          await client.change_presence(status = discord.Status.online, activity= discord.Activity(name=f'хентай 2021 без смс и регестрации', type= discord.ActivityType.watching))
+          await client.change_presence(status = discord.Status.online, activity= discord.Activity(name=f'А4', type= discord.ActivityType.watching))
           await sleep(5)
           guilds = await client.fetch_guilds(limit = None).flatten()
           await client.change_presence(status = discord.Status.online, activity= discord.Activity(name=f'за {len(guilds)} серверами.', type= discord.ActivityType.watching))
@@ -240,6 +240,8 @@ async def помощь(ctx):
        embed.add_field(name="#N0rdGen", value="Генерирует Аккаунт NordVPN на 1 месяц", inline=False)
        embed.add_field(name="#M1neGen", value="Генерирует Аккаунт Minecraft", inline=False)
        embed.add_field(name="#nitroGEN", value="Генерирует Нитро Ссылки", inline=False)
+       embed.add_field(name="#ban", value="Ban человека которого вы упомянули", inline=False)
+       embed.add_field(name="#kick", value="Kick человека которого вы упомянули", inline=False)
 
        await ctx.send(embed=embed)
 
