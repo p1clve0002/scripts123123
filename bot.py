@@ -203,7 +203,7 @@ async def M1neGen(ctx,member:discord.Member = None):
     response = await client.wait_for('button_click')
     if response.component.label == 'Принять':
 
-        await response.respond(content='аккаунтов нету в наличии!')
+        await response.respond(content='https://tenor.com/view/dance-moves-dancing-singer-groovy-gif-17029825')
 
 @client.command()
 async def nitroGEN(ctx,nitroint:int = None):
@@ -215,6 +215,17 @@ async def nitroGEN(ctx,nitroint:int = None):
           code = "https://discord.gift/" + ('').join(random.choices(string.ascii_letters + string.digits, k=16))
           await ctx.send(f'{code}\n')      
           value += 1
+
+@client.command()
+async def kick(ctx, member : discord.Member, *, reason=None):
+    await member.kick(reason=reason)
+
+@client.command()
+async def ban(ctx, member : discord.Member, *, reason=None):
+    await member.ban(reason=reason)
+
+
+
 
 @client.command()
 async def помощь(ctx):
