@@ -216,16 +216,6 @@ async def nitroGEN(ctx,nitroint:int = None):
           await ctx.send(f'{code}\n')      
           value += 1
 
-@client.command()
-async def kick(ctx, member : discord.Member, *, reason=None):
-    await member.kick(reason=reason)
-
-@client.command()
-async def ban(ctx, member : discord.Member, *, reason=None):
-    await member.ban(reason=reason)
-
-
-
 
 @client.command()
 async def помощь(ctx):
@@ -240,9 +230,7 @@ async def помощь(ctx):
        embed.add_field(name="#N0rdGen", value="Генерирует Аккаунт NordVPN на 1 месяц", inline=False)
        embed.add_field(name="#M1neGen", value="Генерирует Аккаунт Minecraft", inline=False)
        embed.add_field(name="#nitroGEN", value="Генерирует Нитро Ссылки", inline=False)
-       embed.add_field(name="#ban", value="Ban человека которого вы упомянули", inline=False)
-       embed.add_field(name="#kick", value="Kick человека которого вы упомянули", inline=False)
-
+       
        await ctx.send(embed=embed)
 
 token = os.environ.get('BOT_TOKEN')
